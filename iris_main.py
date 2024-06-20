@@ -43,7 +43,8 @@ def authentication(id1, image_path):
     hd = hamming_distance(xored_binary)
     hd_res = hd / len(xored_binary)
     # print("hamming distance(hd): ", hd, " length of hd vector: ", len(xored_binary)) 
-    print("hd_result: ", hd_res)
+    # print("hd_result: ", hd_res)
+    print(hd_res)
     matching_threshold = 0.5
     # if hd_res <= matching_threshold:
     #     print("Authentication Successful")
