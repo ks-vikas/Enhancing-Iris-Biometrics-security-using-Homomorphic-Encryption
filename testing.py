@@ -1,6 +1,5 @@
 import os
 import re
-from PIL import Image
 from iris_main import reg_auth
 
 def list_image_files(folder_path):
@@ -14,9 +13,9 @@ def list_image_files(folder_path):
 
 def extract_id_from_filename(file_name):
     """Extract the first three digits from the filename as an ID."""
-    match = re.match(r'(\d{3})([LR])_\d\.png', file_name)
+    match = re.match(r'(\d{3})([LR])(_\d)\.png', file_name)
     if match:
-        return match.group(1) + match.group(2)
+        return match.group(1) + match.group(2)  + match.group(3)
     return None
 
 def batch_image_registration():

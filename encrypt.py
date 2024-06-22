@@ -2,6 +2,17 @@ import tenseal as ts
 import base64
 import os
 
+'''
+This file contains code for performing encryption, decryption and executing eval function
+using the ckks scheme module of tenseal library. It contains functions to create key,
+encrypt data with private key, decrypt data with private key and perform eval function on
+the encrypted data using the public key.
+
+Additionally it also provides functions to store the private and public key
+in Secret and Public folder respectively and the encrypted data in Result and registration
+folder in base64 format.
+'''
+
 def write_data(file_path,file_name, data):
     # print ("Writing: ", file_path,"/",file_name)
     if file_path and not os.path.exists(file_path):
@@ -42,12 +53,16 @@ def create_key():
 
     del context, secret_context, public_context
 
-# Encryption
+# EncryptionandStore
+'''
+This function encrypts the iris code and stores the encrypted data in base64 encoding in 
+the Registration folder.
+'''
 def EncryptandStore(id, vector):
     # Load secret key and context
     context = ts.context_from(read_data("Secret","secret.txt"))
 
-    # Create CKKS vectors
+    # Create CKKS vectors from the iris code
     enc_v1 = ts.ckks_vector(context, vector)
 
     # Serialize and save encrypted vectors
@@ -58,7 +73,12 @@ def EncryptandStore(id, vector):
 
     del context, enc_v1, enc_v1_proto
     
-#Eval
+#eval
+'''
+This function is to perform the Xoring of the encrytped Registed iris code with the 
+Calculated encrypted iris code to be authenticated. 
+The result of the xoring is then stored in the result folder.
+'''
 def eval(id1, id2):
     # print("id1: ",id1)
     # print("id2: ", id2)
@@ -93,6 +113,9 @@ def eval(id1, id2):
 
 
 #decryption
+'''
+Stored encrypted Xoring result is decrypted and returned.
+'''
 def decryption(id_txt):
     context = ts.context_from(read_data('Secret', 'secret.txt'))
     result_read = read_data('Result',id_txt)
@@ -103,6 +126,9 @@ def decryption(id_txt):
     binary_result = [round(x) for x in xored]
     # print('xored: ', binary_result)
     return binary_result
+
+
+
 
 # #For testing run this file alone.
 # vector1 = [0, 0, 1, 1]
