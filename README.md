@@ -22,5 +22,7 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 ### 6. Image Registration
 - CKKS HE scheme from python TenSeal library is used to homomorphically encrypt the iris template. This encrypted template is used for image registration.
 ### 7. Authentication
-- Image to be authenticated is converted to the encrypted template, XORing is performed homomorphically to obtain encrypted Hamming distance and then it is decrypted to get the result of authentication (Used TenSeal Library for homomorphic operations and decryption). 
+- Image to be authenticated is converted to the encrypted template, XORing is performed homomorphically to obtain encrypted Hamming distance and then it is decrypted to get the result of authentication (Used TenSeal Library for homomorphic operations and decryption).
+### 8. FAR, FRR and CERR graph:
+![]()
 
