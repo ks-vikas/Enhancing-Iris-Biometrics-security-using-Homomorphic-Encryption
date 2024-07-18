@@ -24,5 +24,5 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 ### 7. Authentication
 - Image to be authenticated is converted to the encrypted template, XORing is performed homomorphically to obtain encrypted Hamming distance and then it is decrypted to get the result of authentication (Used TenSeal Library for homomorphic operations and decryption).
 ### 8. FAR, FRR and CERR graph:
-![]()
+![](Graph64_iris.png)
 
