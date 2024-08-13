@@ -12,7 +12,7 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 ### 2. Segmentation:
 - Blurring: Used Gaussian and median blur
 - Channel Splitting: used red channel to get pupil boundary
-- Thresholding: used to find the pupil and iris boundaries
+- Thresholding and circle fitting: used to find the pupil and iris boundaries
 ![](segmented.png)
 ### 3. Normalization
 - Used Daugman's [Homogeneous Rubber Sheet Model](https://www.researchgate.net/figure/Rubber-sheet-model-The-homogenous-rubber-sheet-model-remaps-each-point-within-the-iris_fig2_221913731) to obtain normalized iris image of 64 x 512 pixel size
@@ -22,9 +22,9 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 ### 5. Template Creation
 - Performed Phase Quadrant Demodulation to obtain the iris template of 4096 bits.
 ### 6. Image Registration
-- CKKS HE scheme from python TenSeal library is used to homomorphically encrypt the iris template. This encrypted template is used for image registration.
+- CKKS HE scheme from python [TenSEAL](https://github.com/OpenMined/TenSEAL) library is used to homomorphically encrypt the iris template. This encrypted template is used for image registration.
 ### 7. Authentication
-- Image to be authenticated is converted to the encrypted template, XORing is performed homomorphically to obtain encrypted Hamming distance and then it is decrypted to get the result of authentication (Used TenSeal Library for homomorphic operations and decryption).
+- Image to be authenticated is converted to the encrypted template, XORing is performed homomorphically to obtain encrypted Hamming distance and then it is decrypted to get the result of authentication (Used TenSEAL Library for homomorphic operations and decryption).
 ### 8. FAR, FRR and CERR graph:
 ![](Graph64_iris.png)
 
