@@ -7,14 +7,16 @@ This is minor project for M.Tech. program core course supervised by Dr. Vireshwa
 Submitted by: Vikas Kumar Saini (2023MCS2492)  
  
 ### 1. Image Acquisition: 
-- Used online available Iris Database - Phoenix - UPOL
+- Used online available Iris Database - Phoenix - [UPOL]([https://link-url-here.org](https://phoenix.inf.upol.cz/iris/))
 - Image information: 24 bit - RGB, 576 x 768 pixels, file format: PNG
 ### 2. Segmentation:
 - Blurring: Used Gaussian and median blur
 - Channel Splitting: used red channel to get pupil boundary
 - Thresholding: used to find the pupil and iris boundaries
+![](segmented.png)
 ### 3. Normalization
-- Used Daugman's Rubber Sheet Model to obtain normalized iris image of 64 x 512 pixel size
+- Used Daugman's Homogeneous Rubber Sheet Model to obtain normalized iris image of 64 x 512 pixel size
+![](Norm.png)
 ### 4. Feature Extraction
 - Haar Wavelet Decomposition and 2D-Gabor Wavelets are used to reduce the image size and obtain the real and imaginary parts as image features. 
 ### 5. Template Creation
