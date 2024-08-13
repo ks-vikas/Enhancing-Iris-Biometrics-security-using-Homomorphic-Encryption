@@ -15,7 +15,7 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 - Thresholding: used to find the pupil and iris boundaries
 ![](segmented.png)
 ### 3. Normalization
-- Used Daugman's Homogeneous Rubber Sheet Model to obtain normalized iris image of 64 x 512 pixel size
+- Used Daugman's [Homogeneous Rubber Sheet Model](https://www.researchgate.net/figure/Rubber-sheet-model-The-homogenous-rubber-sheet-model-remaps-each-point-within-the-iris_fig2_221913731) to obtain normalized iris image of 64 x 512 pixel size
 ![](Norm.png)
 ### 4. Feature Extraction
 - Haar Wavelet Decomposition and 2D-Gabor Wavelets are used to reduce the image size and obtain the real and imaginary parts as image features. 
