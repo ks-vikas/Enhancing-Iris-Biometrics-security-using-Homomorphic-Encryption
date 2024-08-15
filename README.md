@@ -14,7 +14,7 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 - Channel Splitting: used red channel to get pupil boundary
 - Thresholding and circle fitting: used to find the pupil and iris boundaries
 
-<img src="segmented.png" width="250" height="300">
+<img src="segmented.png" width="350" height="250">
 
 ### 3. Normalization
 - Used [Homogeneous Rubber Sheet Model](https://www.researchgate.net/figure/Rubber-sheet-model-The-homogenous-rubber-sheet-model-remaps-each-point-within-the-iris_fig2_221913731) to obtain normalized iris image of 64 x 512 pixel size
