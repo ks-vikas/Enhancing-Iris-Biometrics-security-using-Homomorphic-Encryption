@@ -16,6 +16,11 @@ Submitted by: Vikas Kumar Saini (2023MCS2492)
 
 <img src="segmented.png" width="320" height="250">
 
+ <figure>
+  <img src="segmented.png" width="320" height="250">
+  <figcaption>Fig.Iris inner and outer boundaries.</figcaption>
+</figure> 
+
 ### 3. Normalization
 - Used [Homogeneous Rubber Sheet Model](https://www.researchgate.net/figure/Rubber-sheet-model-The-homogenous-rubber-sheet-model-remaps-each-point-within-the-iris_fig2_221913731) to obtain normalized iris image of 64 x 512 pixel size
 
