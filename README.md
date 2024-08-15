@@ -7,7 +7,7 @@ This is minor project for M.Tech. program core course supervised by Dr. Vireshwa
 Submitted by: Vikas Kumar Saini (2023MCS2492)  
  
 ### 1. Image Acquisition: 
-- Used online available Iris Database - Phoenix - [UPOL]([https://link-url-here.org](https://phoenix.inf.upol.cz/iris/))
+- Used online available Iris Database - Phoenix - [UPOL](https://link-url-here.org](https://phoenix.inf.upol.cz/iris/)
 - Image information: 24 bit - RGB, 576 x 768 pixels, file format: PNG
 ### 2. Segmentation:
 - Blurring: Used Gaussian and median blur
